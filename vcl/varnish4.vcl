@@ -94,7 +94,7 @@ sub vcl_recv {
     }
 
     # pipe on weird http methods
-    if (req.method !~ "^GET|HEAD|PUT|POST|TRACE|OPTIONS|DELETE$") {
+    if (req.method !~ "^GET|HEAD|PUT|PATCH|POST|TRACE|OPTIONS|DELETE$") {
         return(pipe);
     }
 
